@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Meghalaya</title>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+    .popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 210px;
+  background-color: darkred;
+  color: #fff;
+  border: white solid;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -110px;
+
+
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: whitesmoke transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+    body{
+        background-color: darkred;
+    }
+    ul{
+        padding: 0;
+        list-style: none;
+        background: #000000;
+        
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: center;
+        background-color: black;
+    }
+    ul li a{
+        display: block;
+        padding: 8px 25px;
+        color: rgb(247, 241, 241);
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: black;
+        background: khaki;
+    }
+    ul li ul.dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;	/* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+    .item{
+        display: flex;
+        justify-content: space-evenly;
+       
+    }
+    .Meghalaya{
+    text-align: center;
+    font-family:Papyrus;
+    color: whitesmoke;
+    font-size:50px;
+     
+}
+.marquee{
+    color: whitesmoke;
+}
+
+
+
+div.gallery {
+  margin: 5px;
+ 
+  float: left;
+  width: 300px;
+  height:100
+ 
+}
+
+div.gallery:hover {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: black;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: whitesmoke;
+  font-family:Papyrus ;
+}
+.Hello{
+    display: flex;
+    justify-content: space-evenly;
+}
+.introduction{
+    text-align: center;
+    font-family:Papyrus ;
+    color: antiquewhite;
+    font-size: 40px;
+}
+.helloji{
+    display: flex;
+    justify-content: space-evenly;
+}
+table{
+    border-spacing: 15px;
+}
+.report{
+   font-size: 20px;
+   text-align: center;
+   font-weight: bolder;
+   color: bisque;
+
+}
+img {
+        opacity: 0.5;
+        filter: alpha(opacity=40);
+    }
+    
+    img:hover {
+        opacity: 1.0;
+        filter: alpha(opacity=100);
+    }
+</style>
+</head>
+<body>
+    <h1 class="Meghalaya">
+        मेघालय </h1>   
+     <marquee class="marquee">मेघालय की जनसंख्या के बारे में जानकारी जानने के लिए आप सबसे अच्छे स्थान पर हैं |</marquee>     
+    
+    
+
+<div class="item">
+    <ul>
+        <li><a href="index.html">
+            
+            परिचय</a></li>
+        <li><a href="history1.html">
+            इतिहास</a></li>
+        <li><a href="#">
+            साहित्य  &#9662; </a>
+            <ul class="dropdown">
+                <li><a href="poets.html">
+                    शायर</a></li>
+                <li><a href="writer.html">
+                    लेखक</a></li>
+               
+            </ul></li>
+
+        <li class="loust">
+            <div class="popup" onclick="myFunction()" style="display: block;"><b style="color: aliceblue;">&nbsp भाषा&nbsp&nbsp </b>
+              <span class="popuptext" id="myPopup">
+               
+अंग्रेजी भाषा (आधिकारिक भाषा),
+हिंदी भाषा, नेपाली भाषा, राभा भाषा, खासी भाषा, असमिया भाषा, कोच भाषा, मराठी भाषा, हजोंग भाषा, मारम भाषा, गारो भाषा, सिलहटी भाषा।
+
+
+
+
+              </span>
+            
+            </div></li>
+             <script>
+              // When the user clicks on div, open the popup
+              function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+              }
+              </script>
+
+        <li><a href="population.html">
+            जनसंख्या</a></li>
+        <li><a href="clothes.html">
+            परिधान</a></li>
+            <li><a href="location.html">
+                
+अवस्थति</a></li>
+<li><a href="query.html">
+   
+संशय</a></li>
+    </ul>
+</div>
+<p style="text-align: center;color:bisque ;">
+पूर्वोत्तर भारत में मेघालय एक पहाड़ी राज्य है। नाम का अर्थ है "बादलों का निवास"( संस्कृत में )। मेघालय की जनसंख्या का अनुमान <b style="font-size: 20px;">३२११४७४</b>  है,
+मेघालय में लगभग २२४३०  वर्ग किलोमीटर का क्षेत्र शामिल है।<br><br>
+
+</p>   
+<table style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"cell-spacing="10px">
+    <tr><div style="position: relative;">
+        <td width= "300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">
+            मेघालय का मानव पिरामिड:</p><a href="hindustan.png" target="_blank"><img src="hindustan.png"  width="300" height="300"></a></td>
+        <div >
+        <td  width="300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">मेघालय की  पूरी जनसंख्या की  रिपोर्ट देखें:</p><a href="http://dcmsme.gov.in/dips/state_wise_dips/MEGHALAYA%20STATE%20PROFILE%20REVISED.pdf" target="_blank"><img src="774408_orig.png"  width="300" height="300"class="dive"></a></td>
+    </div>
+</div>
+        <td width="300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">भाषा के आधार पर जनसंख्या:</p> <a href="helly.png" target="_blank"><img src="helly.png" width="300" height="300"></a> </td>
+    </tr>
+    <tr>
+        <td width="300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">
+            लोगों की विकलांगता के आधार पर जनसंख्या:</p><a href="hell.png" target="_blank"><img src="hell.png"  width="300" height="300"></a></td>
+        <td width="300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">मेघालय के स्थानीय लोगों की जनसंख्या की छवि:</p><a href="ho.png" target="_blank"><img src="ho.png"  width="300" height="300"></a></td>
+        <td width="300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">व्यक्तियों, पुरुषों और महिलाओं के आधार पर जनसंख्या:</p><a href="hoho.png" target="_blank"><img src="hoho.png"  width="300" height="300"></a></td>
+    </tr>
+    <tr>
+        <td width="300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">क्षेत्र के आधार पर जनसंख्या:</p><a href="monkey.png" target="_blank"><img src="monkey.png"  width="300" height="300"></a></td>
+        <td width="300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">आयु वर्ग के आधार पर जनसंख्या:</p><a href="unnamed (5).jpg" target="_blank"><img src="unnamed (5).jpg"  width="300" height="300"></a></td>
+        <td width="300" height="300"style="margin-left: auto;margin-right: auto; border: bisque solid 2px;"><p class="report">धर्म के आधार पर जनसंख्या:</p><a href="hellyes.png" target="_blank"><img src="hellyes.png"  width="300" height="300"></a></td>
+    </tr>
+
+</table>
+
+</body>
+</html>

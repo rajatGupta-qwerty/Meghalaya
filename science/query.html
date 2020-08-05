@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <title>Query</title>
+    
+     
+
+  
+    </body>
+    </html>
+<head>
+<style>
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 210px;
+  background-color: darkred;
+  color: #fff;
+  border: white solid;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -110px;
+
+
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: whitesmoke transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  
+  color: aliceblue;
+  background-color: black;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  height: auto;
+
+}
+body{
+    background-color: darkred;
+}
+.link3{
+    color: honeydew;
+    text-decoration: none;
+    display: block;
+}
+.link3:hover{
+    color:khaki;
+    text-decoration: none;
+    display: block;
+    border: solid whitesmoke 5px;
+  
+}
+.link4{
+    color: honeydew;
+    text-decoration: none;
+    display: block;
+}
+.link4:hover{
+    color:khaki;
+    text-decoration: none;
+    display: block;
+    border: solid whitesmoke 5px;
+    
+}
+ul{
+        padding: 0;
+        list-style: none;
+        background: #000000;
+        
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: center;
+        background-color: black;
+    }
+    ul li a{
+        display: block;
+        padding: 8px 25px;
+        color: rgb(247, 241, 241);
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: black;
+        background: khaki;
+    }
+    ul li ul.dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;	/* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+    .item{
+        display: flex;
+        justify-content: space-evenly;
+       
+    }
+    .button{
+      background-color: rgb(0, 0, 0);
+  border: none;
+  color:rgb(255, 255, 255);
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 900;
+  
+ 
+ 
+  
+    }
+    input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+    .loust:hover{
+background-color: black;
+    }
+    ::placeholder{
+        color: darkblue;
+        opacity: 0.5;
+        text-align: center;
+    }
+    
+    h1{
+        color: lightcyan;
+        font-family: Algerian;
+        font-size: 25px;
+    }
+    input[type=submit] {
+  width: 20%;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding: 9px 9px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Corbel Light;
+  font-weight: 900;
+}
+
+input[type=submit]:hover {
+  background-color: #f9fff9;
+  color: #000000;
+  font-weight: 900;
+}
+   
+</style>
+</head>
+<body>
+    <h1 style="text-align:center;color: whitesmoke;font-size: 60px;">मेघालय के बारे में कोई भी संशय</h1>
+    
+ 
+
+
+    <div class="item">
+        <ul>
+            <li><a href="index.html">
+                
+                
+    मुख्य वेबसाइट</a></li>
+            <li><a href="history1.html">
+                इतिहास</a></li>
+            <li><a href="#">
+               साहित्य &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="poets.html">
+                        शायर</a></li>
+                    <li><a href="#">
+                        लेखक</a></li>
+                    
+                </ul></li>
+            
+            <li class="loust">
+              <div class="popup" onclick="myFunction()" style="display: block;"><b style="color: aliceblue;">&nbsp भाषा&nbsp&nbsp </b>
+                <span class="popuptext" id="myPopup">
+                 
+अंग्रेजी भाषा (आधिकारिक भाषा),
+हिंदी भाषा, नेपाली भाषा, राभा भाषा, खासी भाषा, असमिया भाषा, कोच भाषा, मराठी भाषा, हजोंग भाषा, मारम भाषा, गारो भाषा, सिलहटी भाषा।
+
+
+
+
+                </span>
+              
+              </div></li>
+               <script>
+                // When the user clicks on div, open the popup
+                function myFunction() {
+                  var popup = document.getElementById("myPopup");
+                  popup.classList.toggle("show");
+                }
+                </script>
+            <li><a href="population.html">
+                जनसंख्या</a></li>
+            <li><a href="clothes.html">
+                परिधान</a></li>
+                <li><a href="location.html">
+                    
+    अवस्थति</a></li>
+    <li><a href="query.html">
+       
+    संशय</a></li>
+        </ul>
+    </div>
+    <div style="text-align: center;border: solid white ;width: 700px;margin: auto;">
+    <form method="post"action="mailto:rajatgupta11.2019@gmail.com?"enctype="text/plain">
+       <h1> अपना नाम यहां दर्ज करें</h1>
+        <input type="text" name="Name" required style="width: 400px;background-color: lightblue;color: red;font-size: 20px;font-family: Footlight MT Light;"placeholder="Name"><br>
+        <h1> अपना पता  यहां दर्ज करें</h1>
+        <input type="text" name="House Number & Street" required style="width: 400px;background-color: lightblue;color: red;font-size: 20px;font-family: Footlight MT Light;"placeholder="House Number & Street"><br>
+        <input type="text" name="Home/Town/Village" required style="width: 400px;background-color: lightblue;color: red;font-size: 20px;font-family: Footlight MT Light;"placeholder="Home/Town/Village"><br>
+        <input type="text" name="State" required style="width: 400px;background-color: lightblue;color: red;font-size: 20px;font-family: Footlight MT Light;"placeholder="State"><br>
+        <h1> अपना टेलीफोन नंबर यहां दर्ज करें &nbsp;&nbsp;<small style="font-family: Calibri;border: solid whitesmoke;padding: 5px;">Format: 123-456-7890</small></h1>
+        <input type="tel" name="Telephone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required style="width:400px;background-color: lightblue;color: red;font-size: 20px;font-family: Footlight MT Light;"placeholder=" Telephone number"><br>
+        <h1>अपना ईमेल पता  यहां दर्ज करें</h1>
+        <input type="text" name="Email Address" required style="width:400px;background-color: lightblue;color: red;font-size: 20px;font-family: Footlight MT Light;"placeholder="Email Address"><br>
+        <h1>अपनी शंकाएं यहां दर्ज करें</h1>
+        <input type="text" name="My Query is" required style="width:600px;height:200px;background-color: lightblue;color: red;font-size: 20px;font-family: Footlight MT Light;"><br><br><br>
+        <input type ="submit" >
+    </form>
+</div>
+    </body>
+    </html>
+    

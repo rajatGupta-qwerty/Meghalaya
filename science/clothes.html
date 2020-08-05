@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.prev,.next{
+    color: whitesmoke;
+    font-size: 50px;
+}
+body{
+    background-color: darkred;
+}
+
+/* Caption text */
+.text {
+  color: darkred;
+  font-size: 30px;
+  padding: 12px;
+  position: absolute;
+  font-weight: 900;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color:khaki;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-weight: 900;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 100px}
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 210px;
+  background-color: darkred;
+  color: #fff;
+  border: white solid;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -110px;
+
+
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: whitesmoke transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+    body{
+        background-color: darkred;
+    }
+    ul{
+        padding: 0;
+        list-style: none;
+        background: #000000;
+        
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: center;
+        background-color: black;
+    }
+    ul li a{
+        display: block;
+        padding: 8px 25px;
+        color: rgb(247, 241, 241);
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: black;
+        background: khaki;
+    }
+    ul li ul.dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;	/* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+    .item{
+        display: flex;
+        justify-content: space-evenly;
+       
+    }
+    .Meghalaya{
+    text-align: center;
+    font-family:Papyrus;
+    color: whitesmoke;
+    font-size:50px;
+     
+}
+.marquee{
+    color: whitesmoke;
+}
+
+
+
+div.gallery {
+  margin: 5px;
+ 
+  float: left;
+  width: 300px;
+  height:100
+ 
+}
+
+div.gallery:hover {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: black;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: whitesmoke;
+  font-family:Papyrus ;
+}
+.Hello{
+    display: flex;
+    justify-content: space-evenly;
+}
+.introduction{
+    text-align: center;
+    font-family:Papyrus ;
+    color: antiquewhite;
+    font-size: 40px;
+}
+.helloji{
+    display: flex;
+    justify-content: space-evenly;
+}
+table{
+    border-spacing: 15px;
+}
+.report{
+   font-size: 20px;
+   text-align: center;
+   font-weight: bolder;
+   color: bisque;
+
+}
+</style>
+</head>
+<body>
+    <h1 class="Meghalaya">
+        मेघालय </h1>   
+     <marquee class="marquee">मेघालय  की   पोशाकों  के बारे में जानकारी जानने के लिए आप सबसे अच्छे स्थान पर हैं |</marquee>     
+    
+    
+
+<div class="item">
+    <ul>
+        <li><a href="index.html">
+            
+            परिचय</a></li>
+        <li><a href="history1.html">
+            इतिहास</a></li>
+        <li><a href="#">
+            साहित्य&#9662; </a>
+            <ul class="dropdown">
+                <li><a href="poets.html">
+                    शायर</a></li>
+                <li><a href="writer.html">
+                    लेखक</a></li>
+               
+            </ul></li>
+
+        <li class="loust">
+            <div class="popup" onclick="myFunction()" style="display: block;"><b style="color: aliceblue;">&nbsp भाषा&nbsp&nbsp </b>
+              <span class="popuptext" id="myPopup">
+               
+अंग्रेजी भाषा (आधिकारिक भाषा),
+हिंदी भाषा, नेपाली भाषा, राभा भाषा, खासी भाषा, असमिया भाषा, कोच भाषा, मराठी भाषा, हजोंग भाषा, मारम भाषा, गारो भाषा, सिलहटी भाषा।
+
+
+
+
+              </span>
+            
+            </div></li>
+             <script>
+              // When the user clicks on div, open the popup
+              function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+              }
+              </script>
+              
+        <li><a href="population.html">
+            जनसंख्या</a></li>
+        <li><a href="clothes.html">
+            परिधान</a></li>
+            <li><a href="location.html">
+                
+अवस्थति</a></li>
+<li><a href="query.html">
+   
+संशय</a></li>
+    </ul>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"><mark style="background-color: whitesmoke;">1 / 4</mark></div>
+  <img src="Costumes for Men of Meghalaya.jpg" style="width: 100%;">
+  <div class="text">
+<mark style="background-color: rgb(255, 255, 255);text-align: center;font-size: 40px;color: darkred;">
+    यह मेघालय के पसंदीदा कपड़ों में से एक है।</mark></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"><mark style="background-color: whitesmoke;">2 / 4</mark></div>
+  <img src="culture-of-himachal-pradesh.jpg"  style="width: 100%;">
+  <div class="text">
+    <mark style="background-color: rgb(255, 255, 255);font-size: 40px;color: darkred;">
+        यह मेघालय के पसंदीदा कपड़ों में से एक है।</mark></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"><mark style="background-color: whitesmoke;">3 / 4</mark></div>
+  <img src="f.jpg" style="width: 100%;">
+  <div class="text">
+    <mark style="background-color: rgb(255, 255, 255);font-size: 40px;color: darkred;">
+        यह मेघालय के पसंदीदा कपड़ों में से एक है।</mark></div>
+</div>
+<div class="mySlides fade">
+    <div class="numbertext"><mark style="background-color: whitesmoke;">4 / 4</mark></div>
+    <img src="MeghalayaTraditionalDress_20200514132317.jpg"  style="width: 100%;">
+    <div class="text">
+        <mark style="background-color: rgb(255, 255, 255);font-size: 40px;color: darkred;">
+            यह मेघालय के पसंदीदा कपड़ों में से एक है।</mark></div>
+  </div>
+<div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
